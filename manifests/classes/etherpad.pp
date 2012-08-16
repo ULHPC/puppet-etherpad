@@ -7,6 +7,8 @@
 # = Class: etherpad
 #
 # Configure and manage etherpad
+# This class is inspired by Robert Helmer work on "etherpad-vagrant"
+# https://github.com/rhelmer/etherpad-vagrant
 #
 # == Parameters:
 #
