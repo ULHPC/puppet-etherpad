@@ -171,13 +171,6 @@ class etherpad::common {
             creates     => "${etherpad::params::install_base}/node-${etherpad::params::node_version}",
             timeout     => 0,
             require     => [Exec["unpack-node"], Package["build-essential"]];
-
-        "curl --insecure https://npmjs.org/install.sh | sh":
-            alias   => "install-npm",
-            user    => "${etherpad::params::install_user}",
-            cwd     => "${etherpad::params::source_base}",
-            creates => "${etherpad::params::source_base}/npm-${etherpad::params::npm_version}.tgz",
-            require => Exec["install-node"];
     }
 
     ##################
@@ -194,7 +187,7 @@ class etherpad::common {
 
     exec { "/bin/bash bin/installDeps.sh":
         alias       => "install-etherpad-deps",
-        require     => [ Exec["install-npm"], Git::Clone["git-etherpad"] ],
+        require     => [ Exec["install-node"], Git::Clone["git-etherpad"] ],
         environment => "HOME=${etherpad::params::install_base}",
         cwd         => "${etherpad::params::source_base}/etherpad",
         path        => "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/opt/ruby/bin/:${etherpad::params::install_base}/node-${etherpad::params::node_version}/bin",
