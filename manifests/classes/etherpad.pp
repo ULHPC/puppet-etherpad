@@ -181,7 +181,7 @@ class etherpad::common {
     git::clone { "git-etherpad":
         ensure    => "${etherpad::ensure}",
         path      => "${etherpad::params::source_base}/etherpad",
-        source    => "https://github.com/Pita/etherpad-lite.git",
+        source    => "https://github.com/ether/etherpad-lite.git",
         user      => "${etherpad::params::install_user}",
     }
 
