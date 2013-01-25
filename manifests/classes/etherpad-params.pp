@@ -35,6 +35,7 @@ class etherpad::params {
         default => "${etherpad_ensure}"
     }
 
+    $pad_title      = 'Etherpad-lite'
     $ip             = '0.0.0.0'
     $port           = '9001'
     $dbtype         = 'dirty'

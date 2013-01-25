@@ -15,6 +15,9 @@
   Please edit settings.json, not settings.json.template
 */
 {
+  // Name your instance!
+  "title": "<%= scope.lookupvar('etherpad::pad_title') %>",
+
   //Ip and port which etherpad should bind at
   "ip": "<%= scope.lookupvar('etherpad::ip') %>",
   "port" : <%= scope.lookupvar('etherpad::port') %>,
@@ -85,5 +88,8 @@
 
 
   /* The log level we are using, can be: DEBUG, INFO, WARN, ERROR */
-  "loglevel": "INFO"
+  "loglevel": "INFO",
+
+  // restrict socket.io transport methods
+  "socketTransportProtocols" : ['xhr-polling', 'jsonp-polling', 'htmlfile']
 }

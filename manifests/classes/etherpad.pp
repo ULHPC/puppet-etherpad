@@ -30,6 +30,7 @@
 # for instance:
 #
 #         class { 'etherpad':
+#             pad_title      => 'Etherpad-lite @ csc.uni.lu',
 #             ip             => '127.0.0.1',
 #             dbtype         => 'mysql',
 #             mysql_user     => 'etherpad',
@@ -50,6 +51,7 @@
 #
 class etherpad(
     $ensure         = $etherpad::params::ensure,
+    $pad_title      = $etherpad::params::title,
     $ip             = $etherpad::params::ip,
     $port           = $etherpad::params::port,
     $dbtype         = $etherpad::params::dbtype,
