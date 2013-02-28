@@ -30,9 +30,9 @@ class etherpad::params {
     ###########################################
 
     # ensure the presence (or absence) of etherpad
-    $ensure = $etherpad_ensure ? {
+    $ensure = $::etherpad_ensure ? {
         ''      => 'present',
-        default => "${etherpad_ensure}"
+        default => $::etherpad_ensure
     }
 
     $pad_title      = 'Etherpad-lite'
