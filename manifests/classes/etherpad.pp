@@ -54,6 +54,7 @@ class etherpad(
     $pad_title      = $etherpad::params::title,
     $ip             = $etherpad::params::ip,
     $port           = $etherpad::params::port,
+    $session_key    = $etherpad::params::session_key,
     $dbtype         = $etherpad::params::dbtype,
     $filename       = $etherpad::params::filename,
     $mysql_user     = $etherpad::params::mysql_user,

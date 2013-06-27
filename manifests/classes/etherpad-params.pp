@@ -38,6 +38,7 @@ class etherpad::params {
     $pad_title      = 'Etherpad-lite'
     $ip             = '0.0.0.0'
     $port           = '9001'
+    $session_key    = 'Ch4ng3*M3****'
     $dbtype         = 'dirty'
     $filename       = 'var/dirty.db'
     $mysql_user     = 'root'

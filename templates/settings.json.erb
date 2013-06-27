@@ -22,6 +22,10 @@
   "ip": "<%= scope.lookupvar('etherpad::ip') %>",
   "port" : <%= scope.lookupvar('etherpad::port') %>,
 
+  // Session Key, used for reconnecting user sessions
+  // Set this to a secure string at least 10 characters long. Do not share this value.
+  "sessionKey" : "<%= scope.lookupvar('etherpad::session_key') %>",
+
   //The Type of the database. You can choose between dirty, postgres, sqlite and mysql
 <% if scope.lookupvar('etherpad::dbtype') == 'dirty' %>
   //You shouldn't use "dirty" for for anything else than testing or development
