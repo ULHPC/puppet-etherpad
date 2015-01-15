@@ -55,7 +55,7 @@ class etherpad::params {
     # (Modify to adapt to unsupported OSes)
     #######################################
 
-    $node_version  = 'v0.10.12'
+    $node_version  = 'v0.10.35'
     $install_base  = '/home/etherpad'
     $source_base   = '/home/etherpad/dev'
     $install_user  = 'etherpad'
