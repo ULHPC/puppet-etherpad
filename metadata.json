@@ -1,0 +1,44 @@
+{
+  "name": "ULHPC-etherpad",
+  "version": "0.1.1",
+  "author": "UL HPC Management Team",
+  "mail": "hpc-sysadmins@uni.lu",
+  "summary": "Install and configure etherpad-lite",
+  "description": "Install and configure etherpad-lite",
+  "license": "GPL-3.0",
+  "source": "https://github.com/ULHPC/puppet-etherpad",
+  "project_page": "https://github.com/ULHPC/puppet-etherpad",
+  "issues_url": "https://github.com/ULHPC/puppet-etherpad/issues",
+  "forge_url": "https://forge.puppetlabs.com/ULHPC/etherpad",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">=4.2.2 <5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "tags": [
+    "etherpad",
+    "etherpad-lite",
+    "nodejs",
+    "node",
+    "collaboration",
+    "text"
+  ],
+  "classes": [
+    "etherpad",
+    "etherpad::common",
+    "etherpad::debian",
+    "etherpad::params"
+  ],
+  "definitions": [
+
+  ]
+}
