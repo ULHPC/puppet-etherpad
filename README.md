@@ -22,7 +22,7 @@ This module implements the following elements:
 * __Puppet classes__:
     - `etherpad` 
     - `etherpad::common` 
-    - `etherpad::debian` 
+    - `etherpad::common::debian` 
     - `etherpad::params` 
 
 * __Puppet definitions__: 
@@ -57,9 +57,9 @@ See also [`tests/init.pp`](tests/init.pp)
 ### Class `etherpad::common`
 
 See [`tests/common.pp`](tests/common.pp)
-### Class `etherpad::debian`
+### Class `etherpad::common::debian`
 
-See [`tests/debian.pp`](tests/debian.pp)
+See [`tests/common/debian.pp`](tests/common/debian.pp)
 ### Class `etherpad::params`
 
 See [`tests/params.pp`](tests/params.pp)
