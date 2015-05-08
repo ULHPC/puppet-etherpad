@@ -14,6 +14,9 @@ If you want to contribute to the code, you shall be aware of the way this module
            `-- manifests/
                 `-- init.pp      # Main manifests file which defines the etherpad class 
                 `-- params.pp    # ULHPC-etherpad module variables 
+                `-- etherpad.pp 
+                `-- common.pp 
+                `-- debian.pp 
            `-- templates/        # Module ERB template files
            `-- tests/            # Contains examples showing how to declare the module’s classes and defined type
            `-- spec/             # Contains rspec tests 
