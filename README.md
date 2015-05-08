@@ -20,6 +20,10 @@ Install and configure etherpad-lite.
 This module implements the following elements: 
 
 * __Puppet classes__:
+    - `etherpad` 
+    - `etherpad::common` 
+    - `etherpad::debian` 
+    - `etherpad::params` 
 
 * __Puppet definitions__: 
 
@@ -50,6 +54,15 @@ Use is as follows:
 
 See also [`tests/init.pp`](tests/init.pp)
 
+### Class `etherpad::common`
+
+See [`tests/common.pp`](tests/common.pp)
+### Class `etherpad::debian`
+
+See [`tests/debian.pp`](tests/debian.pp)
+### Class `etherpad::params`
+
+See [`tests/params.pp`](tests/params.pp)
 
 
 ## Librarian-Puppet / R10K Setup
