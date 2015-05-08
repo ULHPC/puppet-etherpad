@@ -35,7 +35,7 @@
   "classes": [
     "etherpad",
     "etherpad::common",
-    "etherpad::debian",
+    "etherpad::common::debian",
     "etherpad::params"
   ],
   "definitions": [
