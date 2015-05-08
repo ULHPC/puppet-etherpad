@@ -24,5 +24,21 @@
       ]
     }
   ],
-  "tags": ["etherpad", "etherpad-lite", "nodejs", "node", "collaboration", "text"]
+  "tags": [
+    "etherpad",
+    "etherpad-lite",
+    "nodejs",
+    "node",
+    "collaboration",
+    "text"
+  ],
+  "classes": [
+    "etherpad",
+    "etherpad::common",
+    "etherpad::debian",
+    "etherpad::params"
+  ],
+  "definitions": [
+
+  ]
 }
