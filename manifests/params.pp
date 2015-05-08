@@ -1,4 +1,4 @@
-# File::      <tt>etherpad-params.pp</tt>
+# File::      <tt>params.pp</tt>
 # Author::    Hyacinthe Cartiaux (hyacinthe.cartiaux@uni.lu)
 # Copyright:: Copyright (c) 2012 Hyacinthe Cartiaux
 # License::   GPLv3
