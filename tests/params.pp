@@ -15,7 +15,7 @@
 
 include 'etherpad::params'
 
-$names = ["ensure", "protocol", "port", "packagename"]
+$names = ['ensure', 'protocol', 'port', 'packagename']
 
 notice("etherpad::params::ensure = ${etherpad::params::ensure}")
 notice("etherpad::params::protocol = ${etherpad::params::protocol}")

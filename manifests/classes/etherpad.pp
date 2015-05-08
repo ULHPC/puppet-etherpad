@@ -83,7 +83,7 @@ inherits etherpad::params
         fail("etherpad 'abiword' parameter must be set to either 'dirty' or 'mysql'. sqlite and postgres are not yet supported")
     }
 
-    if ! ($minify in [ 'true', 'false' ]) {
+    if ! ($minify in [ true, false ]) {
         fail("etherpad 'minify' parameter must be set to either 'true' or 'false'")
     }
 
@@ -185,10 +185,10 @@ class etherpad::common {
 
 
     git::clone { 'git-etherpad':
-        ensure    => $etherpad::ensure,
-        path      => "${etherpad::params::source_base}/etherpad",
-        source    => 'https://github.com/ether/etherpad-lite.git',
-        user      => $etherpad::params::install_user,
+        ensure => $etherpad::ensure,
+        path   => "${etherpad::params::source_base}/etherpad",
+        source => 'https://github.com/ether/etherpad-lite.git',
+        user   => $etherpad::params::install_user,
     }
 
     exec { '/bin/bash bin/installDeps.sh':
