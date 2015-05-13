@@ -1,4 +1,4 @@
-# File::      <tt>etherpad-params.pp</tt>
+# File::      <tt>params.pp</tt>
 # Author::    Hyacinthe Cartiaux (hyacinthe.cartiaux@uni.lu)
 # Copyright:: Copyright (c) 2012 Hyacinthe Cartiaux
 # License::   GPLv3
@@ -46,7 +46,7 @@ class etherpad::params {
     $mysql_password = ''
     $mysql_database = 'store'
     $defaultpadtext = 'Welcome to Etherpad Lite!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nEtherpad Lite on Github: http:\/\/j.mp/ep-lite\n'
-    $minify         = 'true'
+    $minify         = true
     $maxage         = '21600'
     $abiword        = 'absent'
     $admin_password = '!!!changethisdefaultpassword!!!'

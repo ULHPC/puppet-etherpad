@@ -16,5 +16,14 @@
 #      sudo puppet apply -t /vagrant/tests/init.pp
 #
 node default {
-    include etherpad
+
+    class { 'etherpad':
+        pad_title      => 'Etherpad-lite @ uni.lu',
+        ip             => '0.0.0.0',
+        dbtype         => 'dirty',
+        session_key    => 'F98Sjdosz1',
+        abiword        => 'present',
+        admin_password => 'jhtyd64s8x'
+    }
+
 }
