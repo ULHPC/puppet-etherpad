@@ -89,17 +89,17 @@ class etherpad::common {
     ## ETHERPAD-LITE #
     ##################
 
-
-    git::clone { 'git-etherpad':
-        ensure => $etherpad::ensure,
-        path   => "${etherpad::params::source_base}/etherpad",
-        source => 'https://github.com/ether/etherpad-lite.git',
-        user   => $etherpad::params::install_user,
+    vcsrepo { "${etherpad::params::source_base}/etherpad":
+        ensure   => $etherpad::ensure,
+        provider => git,
+        user     => $etherpad::params::install_user,
+        path     => "${etherpad::params::source_base}/etherpad",
+        source   => 'https://github.com/ether/etherpad-lite.git',
     }
 
     exec { '/bin/bash bin/installDeps.sh':
         alias       => 'install-etherpad-deps',
-        require     => [ Exec['install-node'], Git::Clone['git-etherpad'] ],
+        require     => [ Exec['install-node'], Vcsrepo["${etherpad::params::source_base}/etherpad"] ],
         environment => "HOME=${etherpad::params::install_base}",
         cwd         => "${etherpad::params::source_base}/etherpad",
         path        => "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/opt/ruby/bin/:${etherpad::params::install_base}/node-${etherpad::params::node_version}/bin",
@@ -145,7 +145,7 @@ class etherpad::common {
         group   => $etherpad::params::configfile_group,
         mode    => $etherpad::params::configfile_mode,
         content => template('etherpad/settings.json.erb'),
-        require => Git::Clone['git-etherpad'],
+        require => Vcsrepo["${etherpad::params::source_base}/etherpad"]
     }
 
 }

@@ -83,7 +83,7 @@ inherits etherpad::params
         fail("etherpad 'abiword' parameter must be set to either 'dirty' or 'mysql'. sqlite and postgres are not yet supported")
     }
 
-    if ! ($minify in [ true, false ]) {
+    if ! (is_bool($minify)) {
         fail("etherpad 'minify' parameter must be set to either 'true' or 'false'")
     }
 
