@@ -48,9 +48,31 @@ It accepts the following parameters:
 
 * `$ensure`: default to 'present', can be 'absent'
 
-Use is as follows:
+Use it as follows:
 
-     include ' etherpad'
+    class { 'etherpad':
+        pad_title      => 'Etherpad-lite @ uni.lu',
+        ip             => '0.0.0.0',
+        dbtype         => 'dirty',
+        session_key    => 'F98Sjdosz1',
+        abiword        => 'present',
+        admin_password => 'jhtyd64s8x'
+    }
+
+Or with a MySQL database:
+
+    class { 'etherpad':
+        pad_title      => 'Etherpad-lite @ csc.uni.lu',
+        ip             => '127.0.0.1',
+        dbtype         => 'mysql',
+        session_key    => 'F98Sjdosz1',
+        mysql_user     => 'etherpad',
+        mysql_host     => 'localhost',
+        mysql_password => '*mysqlPassword*',
+        mysql_database => 'etherpad',
+        abiword        => 'present',
+        admin_password => 'jhtyd64s8x'
+    }
 
 See also [`tests/init.pp`](tests/init.pp)
 
