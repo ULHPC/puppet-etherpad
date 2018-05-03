@@ -1,7 +1,7 @@
 {
   "name": "ULHPC-etherpad",
   "version": "0.1.2",
-  "author": "UL HPC Management Team",
+  "author": "UL HPC Team",
   "mail": "hpc-sysadmins@uni.lu",
   "summary": "Install and configure etherpad-lite",
   "description": "Install and configure etherpad-lite",
