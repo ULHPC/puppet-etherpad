@@ -12,7 +12,7 @@
 class etherpad::common {
 
     # Load the variables used in this module. Check the etherpad-params.pp file
-    require etherpad::params
+    require ::etherpad::params
 
     ###########
     ## COMMON #
@@ -53,7 +53,7 @@ class etherpad::common {
         owner   => $etherpad::params::install_user,
         group   => $etherpad::params::install_group,
         mode    => $etherpad::params::install_mode,
-        recurse => false
+        recurse => false,
     }
 
     ###########
@@ -145,7 +145,7 @@ class etherpad::common {
         group   => $etherpad::params::configfile_group,
         mode    => $etherpad::params::configfile_mode,
         content => template('etherpad/settings.json.erb'),
-        require => Vcsrepo["${etherpad::params::source_base}/etherpad"]
+        require => Vcsrepo["${etherpad::params::source_base}/etherpad"],
     }
 
 }

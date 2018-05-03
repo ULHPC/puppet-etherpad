@@ -90,7 +90,7 @@ inherits etherpad::params
 
 
     case $::operatingsystem {
-        debian, ubuntu: { include etherpad::common::debian }
+        'debian', 'ubuntu': { include ::etherpad::common::debian }
         default: {
             fail("Module ${module_name} is not supported on ${::operatingsystem}")
         }
