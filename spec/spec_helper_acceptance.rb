@@ -1,17 +1,17 @@
+# frozen_string_literal: true
+
 require 'voxpupuli/acceptance/spec_helper_acceptance'
 
 configure_beaker do |host|
   # Additional modules for soft deps required by puppet-nodejs
-  if fact_on(host, 'os.family') == 'Debian'
-    install_module_from_forge_on(host, 'puppetlabs-apt', '>= 4.4.0 < 9.0.0')
-  end
+  install_puppet_module_via_pmt_on(host, 'puppetlabs-apt') if fact_on(host, 'os.family') == 'Debian'
 
   # needed :
   # * a database and granted user
   # * a php with mysql driver
   # * git command used by vcsrepo
 
-  install_module_from_forge_on(host, 'puppetlabs-mysql', '>= 6.0.0 < 13.0.0')
+  install_puppet_module_via_pmt_on(host, 'puppetlabs-mysql')
 
   pp = %(
     include mysql::server

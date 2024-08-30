@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'etherpad::plugins::common' do
@@ -12,6 +14,7 @@ describe 'etherpad::plugins::common' do
       let(:title) { 'ep_myplugin' }
 
       it { is_expected.to compile.with_all_deps }
+
       it {
         is_expected.to contain_nodejs__npm('ep_myplugin').with(
           'ensure'   => 'present',
