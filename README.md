@@ -59,7 +59,7 @@ create those.
 The basic usage is:
 
 ```puppet
-include ::etherpad
+include etherpad
 ```
 
 note that this will use the local DirtyDB and is not recommended beyond basic testing.

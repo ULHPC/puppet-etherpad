@@ -10,7 +10,7 @@ class etherpad::service {
     default => $etherpad::service_provider,
   }
 
-  contain "::etherpad::service::${svc_provider}"
+  contain "etherpad::service::${svc_provider}"
 
   service { $etherpad::service_name:
     ensure   => $etherpad::service_ensure,
@@ -18,7 +18,7 @@ class etherpad::service {
   }
 
   unless $etherpad::ensure == 'absent' {
-    Class["::etherpad::service::${svc_provider}"]
+    Class["etherpad::service::${svc_provider}"]
     -> Service[$etherpad::service_name]
   }
 }

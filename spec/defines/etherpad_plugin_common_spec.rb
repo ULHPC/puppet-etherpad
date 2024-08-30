@@ -6,7 +6,7 @@ describe 'etherpad::plugins::common' do
   on_supported_os.each do |os, facts|
     context "on #{os}" do
       let(:pre_condition) do
-        'include ::etherpad'
+        'include etherpad'
       end
       let(:facts) do
         facts
