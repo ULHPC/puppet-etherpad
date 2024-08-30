@@ -155,14 +155,6 @@ Absolute Path to the abiword binary.
 |-----|--------|
 |String|`/usr/bin/abiword`|
 
-#### manage_tidy
-
-Whether to manage the dependency of the tidy package.
-
-|Type |Default |
-|-----|--------|
-|Boolean|`false`|
-
 #### abiword_path
 
 Absolute Path to the abiword binary.

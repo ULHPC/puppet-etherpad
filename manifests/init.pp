@@ -14,8 +14,6 @@ class etherpad (
   Boolean $manage_user                       = true,
   Boolean $manage_abiword                    = false,
   Stdlib::Absolutepath $abiword_path         = '/usr/bin/abiword',
-  Boolean $manage_tidy                       = false,
-  Stdlib::Absolutepath  $tidy_path           = '/usr/bin/tidy',
   String  $user                              = 'etherpad',
   String  $group                             = 'etherpad',
   Stdlib::Absolutepath $root_dir             = '/opt/etherpad',

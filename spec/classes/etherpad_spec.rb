@@ -234,8 +234,6 @@ describe 'etherpad' do
             manage_user: true,
             manage_abiword: false,
             abiword_path: '/usr/bin/abiword',
-            manage_tidy: false,
-            tidy_path: '/usr/bin/tidy',
             user: 'etherpad',
             group: 'etherpad',
             root_dir: '/opt/etherpad',

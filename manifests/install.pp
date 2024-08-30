@@ -29,11 +29,6 @@ class etherpad::install {
       ensure => $deps_ensure,
     }
   }
-  if $etherpad::manage_tidy {
-    package { 'tidy':
-      ensure => $deps_ensure,
-    }
-  }
 
   if $deps_ensure == 'absent' {
     exec { "/bin/rm -rf ${etherpad::root_dir}":
