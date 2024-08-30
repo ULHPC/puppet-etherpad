@@ -1,13 +1,12 @@
-// LDAP Authentication
-"users": {
-  "ldapauth": <%= to_json_pretty($etherpad::plugins::ep_ldapauth::_real_ldapauth_options) %>
+# LDAP Authentication
+'users': {
+  'ldapauth': <%= to_json_pretty($etherpad::plugins::ep_ldapauth::_real_ldapauth_options) %>,
 },
 
-/*When LDAP is configured, you cannot add more than one Etherpad administrator. To see more, read the documentation.*/
-"users": {
-  "<%= $etherpad::ep_local_admin_login -%>": {
-    "password": "<%= $etherpad::ep_local_admin_pwd -%>",
-    "is_admin": true
+# When LDAP is configured, you cannot add more than one Etherpad administrator. To see more, read the documentation.
+'users': {
+  "<%= ${etherpad::ep_local_admin_login} -%>": {
+    'password': "<%= ${etherpad::ep_local_admin_pwd} -%>",
+    'is_admin': true,
   }
 },
-
